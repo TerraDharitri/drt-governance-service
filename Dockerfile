@@ -11,7 +11,7 @@ RUN apk update && apk add --update --no-cache alpine-sdk libusb-dev musl-dev lin
 RUN python -m ensurepip
 RUN pip install --no-cache --upgrade pip setuptools
 
-RUN npm ci
+RUNnpm ci --force
 
 COPY . ./
 RUN npm run build
